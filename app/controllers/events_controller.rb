@@ -4,7 +4,15 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.map { |event|
+      {
+        title: event.title,
+        start: event.start_time,
+        ending: event.end_time,
+        url: event_path(id: event)
+      }
+    }
+    render json: @events
   end
 
   # GET /events/1

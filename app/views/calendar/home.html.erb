@@ -1,8 +1,15 @@
-<%= javascript_tag do %>
+<script>
   $(document).ready(function() {
-    $('#calendar').fullCalendar()
+    $('#calendar').fullCalendar({
+      events: "/<%= @events %>",
+      header: {
+      	left: "month, agendaWeek, agendaDay",
+      	center: "title",
+      	right: "prevYear,prev,today,next,nextYear"
+      }
+  	})
   });
-<% end %>
+</script>
 
 
 <div id="calendar">
