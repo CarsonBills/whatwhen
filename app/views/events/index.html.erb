@@ -30,11 +30,4 @@
 
 <%= link_to 'New Event', new_event_path %>
 
-<div id="calendar">
-</div>
 
-<%= javascript_tag do %>
-  $(document).ready(function() {
-    $('#calendar').fullCalendar()
-  });
-<% end %>
