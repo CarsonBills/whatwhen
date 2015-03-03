@@ -134,6 +134,7 @@ DEPENDENCIES
   fullcalendar-rails (~> 2.2.5.1)
   jbuilder (~> 2.0)
   jquery-rails
+  momentjs-rails
   pg
   rails (= 4.1.7)
   rspec-rails
