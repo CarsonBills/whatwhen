@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'calendar#home'
+
   resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
