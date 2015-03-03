@@ -1,7 +1,10 @@
 <script>
+
   $(document).ready(function() {
     $('#calendar').fullCalendar({
-      events: "/<%= @events %>",
+      events: {
+      	url: "/events/<%= @events %>",
+        },
       header: {
       	left: "month, agendaWeek, agendaDay",
       	center: "title",
@@ -11,6 +14,7 @@
   });
 </script>
 
+<%= link_to 'New Event', new_event_path %>
 
 <div id="calendar">
 </div>
